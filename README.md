@@ -18,7 +18,7 @@ conecta al portal.
 
 ```mermaid
 flowchart LR
-    A["📦 Terminal nuevo<br/>enchufado"] --> B["📶 Parte 1<br/>Conectarlo al Wi-Fi<br/>(en el terminal)"]
+    A["📦 Terminal nuevo<br/>enchufado"] --> B["📶 Parte 1<br/>Idioma y Wi-Fi<br/>(en el terminal)"]
     B --> C["💻 Parte 2<br/>Abrir el configurador<br/>(mismo Wi-Fi)"]
     C --> D["✅ Marcando en el<br/>Portal del Colaborador"]
 ```
@@ -36,49 +36,63 @@ flowchart LR
 
 ---
 
-### Parte 1 · Conectar el terminal al Wi-Fi
+### Parte 1 · Idioma y Wi-Fi en el terminal
 
-Se hace tocando la pantalla del terminal. Las imágenes son del manual del
-fabricante (en inglés); en el equipo los nombres pueden verse en español. Lo
-que hay que tocar va marcado en rojo.
+Se hace tocando la pantalla del terminal. Lo que hay que tocar va marcado en
+**rojo**. Si el terminal viene en inglés o chino, guiarse por la **posición y el
+color** de cada botón: son los mismos.
+
+#### A. Cambiar el idioma a español
 
 <table>
   <tr>
-    <th width="50%">1.1 Abrir el menú</th>
-    <th width="50%">1.2 Comunicación</th>
+    <th width="25%">A1 · Abrir el menú</th>
+    <th width="25%">A2 · Conf. Sistema</th>
+    <th width="25%">A3 · Conf. Dispositivo</th>
+    <th width="25%">A4 · Idioma</th>
   </tr>
-  <tr align="center">
-    <td><img src="docs/terminal-1-inicio.png" width="200" alt="Pantalla de inicio del terminal con la esquina inferior izquierda marcada"></td>
-    <td><img src="docs/terminal-2-menu.png" width="200" alt="Menú del terminal con Comm marcado"></td>
-  </tr>
-  <tr valign="top">
-    <td>Tocar la <b>esquina de abajo a la izquierda</b> (donde dice la versión). Un terminal nuevo no pide clave; si la pide, entrar como administrador.</td>
-    <td>Tocar <b>Comm</b> (Comunicación).</td>
-  </tr>
-  <tr>
-    <th>1.3 Wi-Fi</th>
-    <th>1.4 Elegir la red</th>
-  </tr>
-  <tr align="center">
-    <td><img src="docs/terminal-3-comunicacion.png" width="200" alt="Menú Comunicación con Wifi marcado"></td>
-    <td><img src="docs/terminal-4-wifi.png" width="200" alt="Lista de redes Wi-Fi con el interruptor y una red marcados"></td>
+  <tr align="center" valign="top">
+    <td><img src="docs/terminal-01-inicio.jpg" width="170" alt="Pantalla de inicio con el botón de ajustes marcado"></td>
+    <td><img src="docs/terminal-02-menu-sistema.jpg" width="170" alt="Menú con Conf. Sistema marcado"></td>
+    <td><img src="docs/terminal-03-sistema.jpg" width="170" alt="Sistema con Conf. Dispositivo marcado"></td>
+    <td><img src="docs/terminal-04-idioma.jpg" width="170" alt="Conf. Dispositivo con Idioma marcado"></td>
   </tr>
   <tr valign="top">
-    <td>Tocar <b>Wifi</b>.</td>
-    <td>Encender <b>Wi-Fi</b>, tocar la red y escribir su clave. Si la red no aparece, «Add WIFI to hand action» permite escribir el nombre a mano.</td>
+    <td>En la pantalla de inicio, tocar el botón de <b>ajustes</b> (las tres barras, el tercero). Un terminal nuevo entra directo, sin clave.</td>
+    <td>Tocar <b>Conf. Sistema</b> (turquesa, con un monitor).</td>
+    <td>Tocar <b>Conf. Dispositivo</b> (amarillo, con un engranaje).</td>
+    <td>Tocar <b>Idioma</b> y elegir <b>Spanish</b>. Volver atrás (<b>‹</b> arriba a la izquierda) hasta el menú.</td>
   </tr>
 </table>
 
-**1.5 (Recomendado) Ver la IP en la pantalla.** En **Comm → Local Setting**
-activar **Show IP address**. Así la pantalla de inicio muestra la dirección del
-terminal en la red (por ejemplo `192.168.1.27`), que sirve si el configurador no
-lo encuentra solo.
+#### B. Conectar el Wi-Fi
 
-<img src="docs/terminal-5-mostrar-ip.png" width="180" alt="Local Setting con Show IP address marcado">
+<table>
+  <tr>
+    <th width="25%">B1 · Red</th>
+    <th width="25%">B2 · WiFi Configuración</th>
+    <th width="25%">B3 · Elegir la red</th>
+    <th width="25%">B4 · Escribir la clave</th>
+  </tr>
+  <tr align="center" valign="top">
+    <td><img src="docs/terminal-05-menu-red.jpg" width="170" alt="Menú con Red marcado"></td>
+    <td><img src="docs/terminal-06-red.jpg" width="170" alt="Red con WiFi Configuración y Se muestra la IP marcados"></td>
+    <td><img src="docs/terminal-07-redes.jpg" width="170" alt="Lista de redes Wi-Fi con una red marcada"></td>
+    <td><img src="docs/terminal-08-clave.jpg" width="170" alt="Información WiFi con Contraseña y el botón de conectar marcados"></td>
+  </tr>
+  <tr valign="top">
+    <td>En el menú, tocar <b>Red</b> (verde, abajo a la izquierda).</td>
+    <td><b>①</b> Tocar <b>WiFi Configuración</b>.<br><b>②</b> <i>(Recomendado)</i> Activar <b>¿Se muestra la IP?</b>: la pantalla de inicio mostrará la IP del terminal, útil si el configurador no lo encuentra solo.</td>
+    <td>Con <b>WiFi</b> encendido, tocar la red del lugar.</td>
+    <td><b>①</b> Escribir <b>solo la contraseña</b> del Wi-Fi.<br><b>②</b> Tocar <b>Conectar</b> (botón de la izquierda).<br>Lo demás (DHCP, IP, máscara, puerta de enlace, DNS) <b>no se toca</b>.</td>
+  </tr>
+</table>
 
-Listo: el terminal ya está en el Wi-Fi. Todo lo demás (dirección del portal,
-idioma, hora de Chile, personas, nombre e imágenes) lo hace el configurador y el
-portal; **no hace falta tocar nada más en el terminal**.
+Cuando la red aparece como **«WiFi Conectado»** y el ícono de Wi-Fi se ve
+arriba a la derecha en la pantalla de inicio, el terminal ya está listo. Todo lo
+demás (dirección del portal, hora de Chile, personas, nombre e imágenes) lo
+hacen el configurador y el portal: **no hace falta tocar nada más en el
+terminal**.
 
 ---
 
@@ -104,7 +118,7 @@ terminal**. Si Windows muestra «Windows protegió su PC», hacer clic en
     <td><img src="docs/configurador-4_clave.png" alt="Clave de administrador opcional"></td>
   </tr>
   <tr valign="top">
-    <td><b>2.3 Buscar el terminal.</b> Aparece como «Terminal de marcaje SV-8396H» con su número de serie (el de la etiqueta de atrás del equipo). Si no aparece, escribir la IP que muestra su pantalla (paso 1.5) y <b>Probar</b>.</td>
+    <td><b>2.3 Buscar el terminal.</b> Aparece como «Terminal de marcaje SV-8396H» con su número de serie (el de la etiqueta de atrás del equipo). Si no aparece, escribir la IP que muestra su pantalla (paso B2 ②) y <b>Probar</b>.</td>
     <td><b>2.4 Clave del terminal.</b> Un terminal nuevo viene sin clave: se puede dejar en blanco o definir una de 4 a 8 dígitos (si se define, <b>anotarla</b>: se pide para volver a configurarlo).</td>
   </tr>
   <tr>
@@ -130,7 +144,7 @@ terminal**. Si Windows muestra «Windows protegió su PC», hacer clic en
 </table>
 
 **Último paso:** enrolar a cada persona en el propio terminal
-(menú → **User** / Usuarios): rostro, huella o tarjeta.
+(menú → **Usuario**): rostro, huella o tarjeta.
 
 ---
 
@@ -138,11 +152,11 @@ terminal**. Si Windows muestra «Windows protegió su PC», hacer clic en
 
 | Problema | Qué hacer |
 |---|---|
-| El configurador no encuentra el terminal | Revisar que el computador y el terminal estén en el **mismo Wi-Fi** (no en la red de invitados). Escribir la IP que muestra la pantalla del terminal (paso 1.5) y **Probar**. |
+| El configurador no encuentra el terminal | Revisar que el computador y el terminal estén en el **mismo Wi-Fi** (no en la red de invitados). Escribir la IP que muestra la pantalla del terminal (paso B2 ②) y **Probar**. |
 | Pide una clave que nadie conoce | El terminal ya fue configurado antes con clave. Pedirla a quien lo configuró o a soporte de Audisoft. |
 | Termina, pero «el terminal aún no informa conexión» | El Wi-Fi no tiene salida a internet o la bloquea. Probar con otra red. Si se usó un código, primero hay que agregarlo en el portal. |
 | El portal no muestra el terminal como conectado | Esperar un minuto (se reporta cada 20 segundos) y revisar en **Configuración → Dispositivos de marcaje → Terminales v2**. |
-| Cambió el Wi-Fi del lugar | Repetir solo la **Parte 1** en el terminal. La conexión al portal se mantiene. |
+| Cambió el Wi-Fi del lugar | Repetir solo la **Parte 1 · B** en el terminal. La conexión al portal se mantiene. |
 
 ---
 
