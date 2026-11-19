@@ -12,14 +12,16 @@ actualiza solo.
 
 ## Instructivo: terminal recién llegado
 
-Son **dos partes**: primero el terminal se conecta al Wi-Fi (en el propio equipo)
-y después el configurador, desde un computador en esa **misma red Wi-Fi**, lo
+Son **tres partes**: en el portal se agrega el terminal (eso entrega su
+dirección de conexión), el terminal se conecta al Wi-Fi (en el propio equipo) y
+después el configurador, desde un computador en esa **misma red Wi-Fi**, lo
 conecta al portal.
 
 ```mermaid
 flowchart LR
+    P["🌐 Parte 0<br/>Agregar el terminal<br/>(en el portal)"] --> B
     A["📦 Terminal nuevo<br/>enchufado"] --> B["📶 Parte 1<br/>Idioma y Wi-Fi<br/>(en el terminal)"]
-    B --> C["💻 Parte 2<br/>Abrir el configurador<br/>(mismo Wi-Fi)"]
+    B --> C["💻 Parte 2<br/>Abrir el configurador<br/>y pegar la dirección"]
     C --> D["✅ Marcando en el<br/>Portal del Colaborador"]
 ```
 
@@ -30,9 +32,30 @@ flowchart LR
 | El terminal enchufado a la corriente | Que encienda (tarda cerca de un minuto). |
 | Nombre y clave del Wi-Fi donde quedará instalado | El terminal se conecta a esa red. |
 | Un computador con Windows **en ese mismo Wi-Fi** | Desde ahí se usa el configurador. |
-| La **dirección del terminal** que entrega el portal *(recomendado)* | En el portal: **Configuración → Dispositivos de marcaje → Terminales v2** → botón «Dirección» → «Copiar». Si el terminal aún no está en el portal, basta con el RUT de la empresa (ver paso 2.4). |
+| La **dirección de conexión** del terminal | Se genera en el portal al agregarlo (ver Parte 0). También llega por correo. |
 
 > La red tiene que tener **salida a internet**: el terminal habla directo con el portal.
+
+---
+
+### Parte 0 · Agregar el terminal en el portal
+
+En el portal: **Configuración → Dispositivos de marcaje → Terminales v2 →
+«Agregar terminal»**. Ponerle un nombre (se muestra en el equipo) y elegir la
+sucursal (el terminal recibe a las personas de esa sucursal).
+
+Al agregarlo, el portal muestra dos cosas y las manda **por correo** a quien
+lo agregó:
+
+| Qué | Para qué |
+|---|---|
+| **Dirección de conexión** (`https://…/terminal/…`) | Se pega en el configurador (paso 2.4). Funciona como la clave del terminal. |
+| **Clave de administrador del terminal** (6 dígitos) | **No hay que escribirla en ninguna parte**: el configurador se la define sola al terminal. Sirve para entrar al menú del terminal, así que conviene guardarla. |
+
+> **La dirección sirve para un solo terminal.** El primero que se conecta con
+> ella queda amarrado y ningún otro equipo la puede usar. Si se pierde o se
+> filtró, en el portal se genera otra con el botón **«Dirección»** del terminal
+> (la clave de administrador se mantiene).
 
 ---
 
@@ -111,35 +134,23 @@ terminal**. Si Windows muestra «Windows protegió su PC», hacer clic en
   </tr>
   <tr valign="top">
     <td><b>2.1</b> Elegir <b>Configurar huellero</b>.</td>
-    <td><b>2.2</b> La bienvenida resume lo que se va a hacer. <b>Siguiente</b>.</td>
+    <td><b>2.2</b> La bienvenida resume lo que se va a hacer. <b>Comenzar</b>.</td>
   </tr>
   <tr>
-    <td><img src="docs/configurador-3_buscar.png" alt="Búsqueda del terminal en la red"></td>
-    <td><img src="docs/configurador-4_clave.png" alt="Clave de administrador opcional"></td>
+    <td><img src="docs/configurador-3_buscar.png" alt="Búsqueda del terminal en la red, con su disponibilidad"></td>
+    <td><img src="docs/configurador-4_portal.png" alt="Conexión al portal: pegar la dirección"></td>
   </tr>
   <tr valign="top">
-    <td><b>2.3 Buscar el terminal.</b> Aparece como «Terminal de marcaje SV-8396H» con su número de serie (el de la etiqueta de atrás del equipo). Si no aparece, escribir la IP que muestra su pantalla (paso B2 ②) y <b>Probar</b>.</td>
-    <td><b>2.4 Clave del terminal.</b> Un terminal nuevo viene sin clave: se puede dejar en blanco o definir una de 4 a 8 dígitos (si se define, <b>anotarla</b>: se pide para volver a configurarlo).</td>
+    <td><b>2.3 Buscar el terminal.</b> Aparece como «Terminal de marcaje SV-8396H» con su número de serie (el de la etiqueta de atrás del equipo) y su <b>disponibilidad</b>:<br>• <b>Disponible</b>: no tiene clave de administrador; es el caso de un terminal nuevo.<br>• <b>No disponible</b>: ya tiene clave, porque ya se configuró. Solo se puede volver a configurar con la misma dirección con que se conectó.</td>
+    <td><b>2.4 Conexión al portal.</b> Pegar la <b>dirección de conexión</b> del portal (botón <b>Pegar</b>). El configurador le pide al portal la clave de administrador y se la carga sola al terminal: no se escribe ninguna clave.</td>
   </tr>
   <tr>
-    <td><img src="docs/configurador-5_portal.png" alt="Conexión al portal"></td>
-    <td><img src="docs/configurador-6_configurar.png" alt="Revisar y configurar"></td>
+    <td><img src="docs/configurador-5_configurar.png" alt="Revisar y configurar"></td>
+    <td><img src="docs/configurador-6_listo.png" alt="Terminal conectado"></td>
   </tr>
   <tr valign="top">
-    <td><b>2.5 Conexión al portal.</b> Pegar la <b>dirección</b> copiada del portal (recomendado). Si el terminal aún no está en el portal, elegir «generar un código», el servidor y el RUT de la empresa.</td>
-    <td><b>2.6 Revisar y configurar.</b> Muestra lo que se escribirá en el terminal. <b>Configurar terminal</b> y esperar los ✔.</td>
-  </tr>
-  <tr>
-    <td><img src="docs/configurador-7_listo.png" alt="Terminal conectado"></td>
-    <td valign="top">
-      <b>2.7 ¡Terminal conectado!</b><br><br>
-      En menos de un minuto el terminal recibe las personas de su sucursal, el
-      idioma, la hora de Chile, su nombre y las imágenes de Audisoft.<br><br>
-      <b>Si se usó «generar un código»:</b> falta un paso. En el portal,
-      <b>Configuración → Dispositivos de marcaje → Terminales v2 → «Agregar terminal»</b>,
-      pegar el código, ponerle nombre y elegir la sucursal. Guardar bien el código:
-      funciona como clave del terminal y el configurador no lo vuelve a mostrar.
-    </td>
+    <td><b>2.5 Revisar y configurar.</b> Muestra lo que se escribirá en el terminal. <b>Configurar terminal</b> y esperar los ✔.</td>
+    <td><b>2.6 ¡Terminal conectado!</b> En menos de un minuto el terminal recibe las personas de su sucursal, el idioma, la hora de Chile, su nombre y las imágenes de Audisoft. Desde ahí la dirección queda amarrada a ese terminal.</td>
   </tr>
 </table>
 
@@ -152,11 +163,17 @@ terminal**. Si Windows muestra «Windows protegió su PC», hacer clic en
 
 | Problema | Qué hacer |
 |---|---|
-| El configurador no encuentra el terminal | Revisar que el computador y el terminal estén en el **mismo Wi-Fi** (no en la red de invitados). Escribir la IP que muestra la pantalla del terminal (paso B2 ②) y **Probar**. |
-| Pide una clave que nadie conoce | El terminal ya fue configurado antes con clave. Pedirla a quien lo configuró o a soporte de Audisoft. |
-| Termina, pero «el terminal aún no informa conexión» | El Wi-Fi no tiene salida a internet o la bloquea. Probar con otra red. Si se usó un código, primero hay que agregarlo en el portal. |
+| El configurador no encuentra el terminal | Revisar que el computador y el terminal estén en el **mismo Wi-Fi** (no en la red de invitados) y pulsar **Buscar de nuevo**. La IP que muestra la pantalla del terminal (paso B2 ②) ayuda a confirmar que está en la misma red que el computador. |
+| El terminal aparece **No disponible** | Ya tiene clave de administrador: se configuró antes. Si es el mismo terminal, pegar la dirección con que se conectó (o generar una nueva para ese terminal en el portal). Si es un equipo reutilizado de otro lugar, restablecerlo de fábrica desde su menú y buscarlo de nuevo. |
+| «Esta dirección ya se usó en otro terminal» | Cada dirección sirve para un solo terminal. Agregar este terminal en el portal (Parte 0) o generar una dirección nueva con el botón **«Dirección»**. |
+| «El portal no reconoce esta dirección» | Se generó una dirección más nueva o el terminal se eliminó del portal. Copiar la dirección vigente desde el portal o el correo más reciente. |
+| Termina, pero «el terminal aún no informa conexión» | El Wi-Fi no tiene salida a internet o la bloquea. Probar con otra red. |
 | El portal no muestra el terminal como conectado | Esperar un minuto (se reporta cada 20 segundos) y revisar en **Configuración → Dispositivos de marcaje → Terminales v2**. |
 | Cambió el Wi-Fi del lugar | Repetir solo la **Parte 1 · B** en el terminal. La conexión al portal se mantiene. |
+
+> **Desde la versión 1.1.0** el configurador ya no pide escribir la IP a mano,
+> ni la clave del terminal, ni genera códigos con el RUT de la empresa: todo
+> parte de la dirección de conexión que entrega el portal.
 
 ---
 
