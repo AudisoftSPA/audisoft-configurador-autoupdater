@@ -44,20 +44,26 @@ que hay que tocar va marcado en rojo.
 
 <table>
   <tr>
-    <th>1.1 Abrir el menú</th>
-    <th>1.2 Comunicación</th>
-    <th>1.3 Wi-Fi</th>
-    <th>1.4 Elegir la red</th>
+    <th width="50%">1.1 Abrir el menú</th>
+    <th width="50%">1.2 Comunicación</th>
   </tr>
-  <tr>
-    <td><img src="docs/terminal-1-inicio.png" width="180" alt="Pantalla de inicio del terminal con la esquina inferior izquierda marcada"></td>
-    <td><img src="docs/terminal-2-menu.png" width="180" alt="Menú del terminal con Comm marcado"></td>
-    <td><img src="docs/terminal-3-comunicacion.png" width="180" alt="Menú Comunicación con Wifi marcado"></td>
-    <td><img src="docs/terminal-4-wifi.png" width="180" alt="Lista de redes Wi-Fi con el interruptor y una red marcados"></td>
+  <tr align="center">
+    <td><img src="docs/terminal-1-inicio.png" width="200" alt="Pantalla de inicio del terminal con la esquina inferior izquierda marcada"></td>
+    <td><img src="docs/terminal-2-menu.png" width="200" alt="Menú del terminal con Comm marcado"></td>
   </tr>
   <tr valign="top">
     <td>Tocar la <b>esquina de abajo a la izquierda</b> (donde dice la versión). Un terminal nuevo no pide clave; si la pide, entrar como administrador.</td>
     <td>Tocar <b>Comm</b> (Comunicación).</td>
+  </tr>
+  <tr>
+    <th>1.3 Wi-Fi</th>
+    <th>1.4 Elegir la red</th>
+  </tr>
+  <tr align="center">
+    <td><img src="docs/terminal-3-comunicacion.png" width="200" alt="Menú Comunicación con Wifi marcado"></td>
+    <td><img src="docs/terminal-4-wifi.png" width="200" alt="Lista de redes Wi-Fi con el interruptor y una red marcados"></td>
+  </tr>
+  <tr valign="top">
     <td>Tocar <b>Wifi</b>.</td>
     <td>Encender <b>Wi-Fi</b>, tocar la red y escribir su clave. Si la red no aparece, «Add WIFI to hand action» permite escribir el nombre a mano.</td>
   </tr>
