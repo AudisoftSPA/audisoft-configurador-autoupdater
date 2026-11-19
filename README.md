@@ -32,7 +32,7 @@ flowchart LR
 | El terminal enchufado a la corriente | Que encienda (tarda cerca de un minuto). |
 | Nombre y clave del Wi-Fi donde quedará instalado | El terminal se conecta a esa red. |
 | Un computador con Windows **en ese mismo Wi-Fi** | Desde ahí se usa el configurador. |
-| La **dirección de conexión** del terminal | Se genera en el portal al agregarlo (ver Parte 0). También llega por correo. |
+| La **dirección de conexión** del terminal | Se genera en el portal al agregarlo (ver Parte 0) y se copia desde ahí. |
 
 > La red tiene que tener **salida a internet**: el terminal habla directo con el portal.
 
@@ -44,13 +44,14 @@ En el portal: **Configuración → Dispositivos de marcaje → Terminales v2 →
 «Agregar terminal»**. Ponerle un nombre (se muestra en el equipo) y elegir la
 sucursal (el terminal recibe a las personas de esa sucursal).
 
-Al agregarlo, el portal muestra dos cosas y las manda **por correo** a quien
-lo agregó:
+Al agregarlo, el portal muestra dos cosas. A quien lo agregó le llega **por
+correo solo la clave**; la dirección se copia desde el portal (no viaja por
+correo):
 
 | Qué | Para qué |
 |---|---|
-| **Dirección de conexión** (`https://…/terminal/…`) | Se pega en el configurador (paso 2.4). Funciona como la clave del terminal. |
-| **Clave de administrador del terminal** (6 dígitos) | **No hay que escribirla en ninguna parte**: el configurador se la define sola al terminal. Sirve para entrar al menú del terminal, así que conviene guardarla. |
+| **Dirección de conexión** (`https://…/terminal/…`) | Copiarla al tiro: se muestra una sola vez. Se pega en el configurador (paso 2.4) y funciona como la clave del terminal. |
+| **Clave de administrador del terminal** (6 dígitos, también por correo) | **No hay que escribirla en ninguna parte**: se le carga sola al terminal cuando se conecta. Sirve para entrar al menú del terminal, así que conviene guardarla. |
 
 > **La dirección sirve para un solo terminal.** El primero que se conecta con
 > ella queda amarrado y ningún otro equipo la puede usar. Si se pierde o se
@@ -166,7 +167,7 @@ terminal**. Si Windows muestra «Windows protegió su PC», hacer clic en
 | El configurador no encuentra el terminal | Revisar que el computador y el terminal estén en el **mismo Wi-Fi** (no en la red de invitados) y pulsar **Buscar de nuevo**. La IP que muestra la pantalla del terminal (paso B2 ②) ayuda a confirmar que está en la misma red que el computador. |
 | El terminal aparece **No disponible** | Ya tiene clave de administrador: se configuró antes. Si es el mismo terminal, pegar la dirección con que se conectó (o generar una nueva para ese terminal en el portal). Si es un equipo reutilizado de otro lugar, restablecerlo de fábrica desde su menú y buscarlo de nuevo. |
 | «Esta dirección ya se usó en otro terminal» | Cada dirección sirve para un solo terminal. Agregar este terminal en el portal (Parte 0) o generar una dirección nueva con el botón **«Dirección»**. |
-| «El portal no reconoce esta dirección» | Se generó una dirección más nueva o el terminal se eliminó del portal. Copiar la dirección vigente desde el portal o el correo más reciente. |
+| «El portal no reconoce esta dirección» | Se generó una dirección más nueva o el terminal se eliminó del portal. Generar una dirección nueva en el portal con el botón **«Dirección»** y copiarla. |
 | Termina, pero «el terminal aún no informa conexión» | El Wi-Fi no tiene salida a internet o la bloquea. Probar con otra red. |
 | El portal no muestra el terminal como conectado | Esperar un minuto (se reporta cada 20 segundos) y revisar en **Configuración → Dispositivos de marcaje → Terminales v2**. |
 | Cambió el Wi-Fi del lugar | Repetir solo la **Parte 1 · B** en el terminal. La conexión al portal se mantiene. |
