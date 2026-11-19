@@ -182,9 +182,11 @@ terminal**. Si Windows muestra «Windows protegió su PC», hacer clic en
 
 Este repositorio guarda **solo las versiones publicadas del `.exe`**
 (pestaña [Releases](https://github.com/AudisoftSPA/audisoft-configurador-autoupdater/releases)).
-Al abrirse, el configurador revisa si hay una versión nueva y, en la pantalla de
-inicio, ofrece **Actualizar ahora** o **Más tarde**. Sin internet sigue
-funcionando igual. La versión en uso se ve abajo a la izquierda y en el título
+Al abrirse, el configurador revisa si hay una versión nueva. Desde la 1.2.0 la
+**actualización es obligatoria**: muestra **Actualizar ahora** (o **Cerrar el
+configurador**) y no se puede usar sin actualizar. Se revisa solo al abrir, así
+que nunca interrumpe una configuración en curso. Sin internet sigue funcionando
+igual. La versión en uso se ve abajo a la izquierda y en el título
 de la ventana.
 
 El código fuente está en un repositorio privado de Audisoft.
