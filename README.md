@@ -150,7 +150,7 @@ terminal**. Si Windows muestra «Windows protegió su PC», hacer clic en
     <td><img src="docs/configurador-6_listo.png" alt="Terminal conectado"></td>
   </tr>
   <tr valign="top">
-    <td><b>2.5 Revisar y configurar.</b> Muestra lo que se escribirá en el terminal. <b>Configurar terminal</b> y esperar los ✔.</td>
+    <td><b>2.5 Revisar y configurar.</b> Muestra lo que se escribirá en el terminal. <b>Configurar terminal</b> y esperar los ✔. Al final el terminal <b>se reinicia solo</b> (tarda cerca de un minuto) para tomar la dirección.</td>
     <td><b>2.6 ¡Terminal conectado!</b> En menos de un minuto el terminal recibe las personas de su sucursal, el idioma, la hora de Chile, su nombre y las imágenes de Audisoft. Desde ahí la dirección queda amarrada a ese terminal.</td>
   </tr>
 </table>
@@ -168,7 +168,7 @@ terminal**. Si Windows muestra «Windows protegió su PC», hacer clic en
 | El terminal aparece **No disponible** | Ya tiene clave de administrador: se configuró antes. Si es el mismo terminal, pegar la dirección con que se conectó (o generar una nueva para ese terminal en el portal). Si es un equipo reutilizado de otro lugar, restablecerlo de fábrica desde su menú y buscarlo de nuevo. |
 | «Esta dirección ya se usó en otro terminal» | Cada dirección sirve para un solo terminal. Agregar este terminal en el portal (Parte 0) o generar una dirección nueva con el botón **«Dirección»**. |
 | «El portal no reconoce esta dirección» | Se generó una dirección más nueva o el terminal se eliminó del portal. Generar una dirección nueva en el portal con el botón **«Dirección»** y copiarla. |
-| Termina, pero «el terminal aún no informa conexión» | El Wi-Fi no tiene salida a internet o la bloquea. Probar con otra red. |
+| Termina, pero «el terminal aún no informa conexión» | El Wi-Fi no tiene salida a internet o la bloquea. Probar con otra red. Si se configuró con una versión anterior a la 1.3.0, volver a configurarlo con la versión actual (pega la misma dirección): la 1.3.0 lo reinicia y lo deja conectado. |
 | El portal no muestra el terminal como conectado | Esperar un minuto (se reporta cada 20 segundos) y revisar en **Configuración → Dispositivos de marcaje → Terminales v2**. |
 | Cambió el Wi-Fi del lugar | Repetir solo la **Parte 1 · B** en el terminal. La conexión al portal se mantiene. |
 
