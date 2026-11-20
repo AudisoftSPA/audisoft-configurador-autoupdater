@@ -8,6 +8,8 @@ actualiza solo.
   <a href="https://github.com/AudisoftSPA/audisoft-configurador-autoupdater/releases/latest/download/Configurador-Terminal-SV-8396H.exe"><b>⬇ Descargar el configurador (última versión)</b></a>
 </p>
 
+🎬 **Video paso a paso (3½ min):** [ver el video del alta del terminal en el portal y la configuración con el configurador](docs/Configuracion-terminal-SV-8396H.mp4)
+
 ---
 
 ## Instructivo: terminal recién llegado
